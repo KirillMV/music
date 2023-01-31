@@ -1,21 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import FilterButtons from "./companents/filterButtons";
+import FilterButtons from "./companents/filter_buttons_logick";
 import Burger from "./companents/burger";
 import PlaylistItem from "./companents/playlist_title";
 
 const root = ReactDOM.createRoot(
-  document.querySelector(".centerblock__filter")
-);
+    document.querySelector(".centerblock__filter")
+  );
+
+  root.render(
+    <FilterButtons/>
+   );
+
+
 const brg = ReactDOM.createRoot(document.querySelector(".main__nav"));
 brg.render(<Burger />);
-root.render(
-  <React.Fragment>
-    <FilterButtons name="исполнителю" />
-    <FilterButtons name="году выпуска" />
-    <FilterButtons name="жанру" />
-  </React.Fragment>
-);
+
 
 const playlist = ReactDOM.createRoot(
   document.querySelector(".content__playlist")

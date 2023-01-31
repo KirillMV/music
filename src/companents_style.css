@@ -867,3 +867,15 @@ body {
 .volume__progress-line {
   width: 109px;
 }
+
+.dropdown {
+  margin-left: 10px;
+}
+.filter__button-dropdown {
+  position: absolute;
+  width: 248px;
+  height: 386px;
+  background-color: #313131;
+  border-radius: 12px;
+  margin-top: 10px;
+}
