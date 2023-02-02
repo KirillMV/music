@@ -2,32 +2,22 @@ import React from "react";
 import "../companents_styles.css";
 import PlaylistItem from "./playlisy_title";
 import { useState } from "react";
+import { useEffect } from "react";
+
+ window.music = []
 
 function ContentPlaylist() {
-
-let [music,setMusic] = useState('')
+let [album,setAlbum]= useState()
+useEffect(()=>{
  fetch("https://painassasin.online/catalog/track/all/")
-  .then((response) => {
-      return (response.json().then((data) => {
-        
-          
-          setMusic(data.map(p =>PlaylistItem(p)))
-      }))
-  });
-
-console.log(music);
+  .then((response) => response.json())
+  .then((posts) => {
+  setAlbum(posts.map((p)=>PlaylistItem(p)))
+  })
+},[album])
 
 
-
-
-  // fetch("https://painassasin.online/catalog/track/all/")
-  //   .then((res) => res.json())
-  //   .then((posts) => {
-  //     console.log(posts);
-  //     music = posts.map((song) => PlaylistItem(song));
-  //     console.log(music);
-  //   });
-  return (<div className="content__playlist playlist">{music}</div>)
+  return (<div className="content__playlist playlist">{album}</div>)
 }
 
 export default ContentPlaylist

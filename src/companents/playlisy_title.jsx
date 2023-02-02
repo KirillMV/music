@@ -3,7 +3,7 @@ import "../companents_styles.css";
 
 function PlaylistItem(props) {
   return (
-    <div className="playlist__item ">
+    <div key={props.id} className="playlist__item">
       <div className="playlist__track track">
         <div className="track__title">
           <div className="track__title-image">

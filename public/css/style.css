@@ -4,36 +4,36 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box; 
 }
-/* не перенес */
+
 *:before,
 *:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-/* не пренес */
+
 a,
 a:visited {
   text-decoration: none;
   font-family: 'StratosSkyeng', sans-serif;
   cursor: pointer;
 }
-/* не перенес */
+
 button,
 ._btn {
   cursor: pointer;
 }
-/* не перенес */
+
 ul li {
   list-style: none;
 }
-/* не перенес */
+
 @font-face {
   font-family: 'StratosSkyeng';
   src: local("StratosSkyeng"), local("StratosSkyeng"), url("../fonts/Stratos-Regular.woff2") format("woff2"), url("../fonts/Stratos-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
-/* не перенес */
+
 html,
 body {
   width: 100%;
@@ -56,38 +56,38 @@ body {
   position: relative;
   background-color: #181818;
 }
-/* не перенес */
+
 ._btn-text:hover {
   border-color: #D9B6FF;
   color: #D9B6FF;
   cursor: pointer;
 }
-/* не перенес */
+
 ._btn-icon:hover svg {
   fill: transparent;
   stroke: #ACACAC;
   cursor: pointer;
 }
-/* не перенес */
+
 ._btn-text:active {
   border-color: #AD61FF;
   color: #AD61FF;
   cursor: pointer;
 }
-/* не перенес */
+
 ._btn-icon:active svg {
   fill: transparent;
   stroke: #FFFFFF;
   cursor: pointer;
 }
-/* не перенес */
+
 ._btn-icon:active .track-play__like-svg,
 ._btn-icon:active .track-play__dislike-svg {
   fill: #696969;
   stroke: #FFFFFF;
   cursor: pointer;
 }
-/* не перенес */
+
 .main {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;

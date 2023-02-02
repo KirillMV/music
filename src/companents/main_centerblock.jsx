@@ -6,14 +6,14 @@ import CenterblockContent from "./centerblock_content";
 
 function MainCenterBlock() {
   return (
-    // <div className="main__centerblock centerblock">
-    <React.Fragment>
+    <div className="main__centerblock centerblock">
+    
       <CenterBlockSearch />
       <h2 className="centerblock__h2">Треки</h2>
       <CenterBlockFilters />
       <CenterblockContent />
-    </React.Fragment>
-    // </div>
+    
+    </div>
   );
 }
 

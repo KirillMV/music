@@ -1,34 +1,34 @@
 import React from "react";
-import FilterButton from "./filter_buttons";
+import FilterButton from "./filter_button";
 import "../companents_styles.css";
 const { useState } = React;
 
 function CenterBlockFilters() {
-  let [visibleAll, setVisibleAll] = useState(false);
+  let [selectedFilter, setSelectedFilter] = useState("null");
 
   return (
     <div className="centerblock__filter filter">
       <div className="filter__title">Искать по:</div>
       <div className="dropdown">
         <FilterButton
-          visible={visibleAll}
-          setVisible={setVisibleAll}
+          visible={selectedFilter === "исполнителю"}
+          onSelect={(select) => setSelectedFilter(select)}
           name={"исполнителю"}
         />
       </div>
 
       <div className="dropdown">
         <FilterButton
-          visible={visibleAll}
-          setVisible={setVisibleAll}
+          visible={selectedFilter === "году выпуска"}
+          onSelect={(select) => setSelectedFilter(select)}
           name={"году выпуска"}
         />
       </div>
 
       <div className="dropdown">
         <FilterButton
-          visible={visibleAll}
-          setVisible={setVisibleAll}
+          visible={selectedFilter === "жанру"}
+          onSelect={(select) => setSelectedFilter(select)}
           name={"жанру"}
         />
       </div>
