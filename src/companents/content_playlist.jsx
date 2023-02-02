@@ -14,7 +14,7 @@ useEffect(()=>{
   .then((posts) => {
   setAlbum(posts.map((p)=>PlaylistItem(p)))
   })
-},[album])
+},[])
 
 
   return (<div className="content__playlist playlist">{album}</div>)
