@@ -1,5 +1,5 @@
 import React from "react";
-import FilterButton from "./filter_button";
+import FilterButton from "../functional_companents/filter_button";
 import "../companents_styles.css";
 const { useState } = React;
 

@@ -1,6 +1,6 @@
 import React from "react";
 import "../companents_styles.css";
-import PlaylistItem from "./playlisy_title";
+import PlaylistItem from "./playlist_item";
 import { useState } from "react";
 import { useEffect } from "react";
 

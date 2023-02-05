@@ -1,8 +1,8 @@
 import React from "react";
 import "../companents_styles.css";
 import MainNav from "./main_nav";
-import MainCenterBlock from "./main_centerblock";
-import MainSidebar from "./saidebar_main";
+import MainCenterBlock from "../centerblock/main_centerblock";
+import MainSidebar from "../saidebar/saidebar_main";
 
 function Main() {
   return (

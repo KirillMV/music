@@ -1,7 +1,7 @@
 import React from "react";
 import "../companents_styles.css";
-import ContentPlaylist from "./content_playlist";
-import MainContentTitle from "./main_content_title"
+import ContentPlaylist from "../functional_companents/content_playlist";
+import MainContentTitle from "../main/main_content_title"
 
 function CenterblockContent(){
     return(
