@@ -87,7 +87,7 @@ function Bar() {
               </S.trackPlayLikeDis>
             </S.playerTrackPlay>
           </S.barPlayer>
-          <div className="bar__volume-block volume">
+          <S.barVolumeBlock className="bar__volume-block volume">
             <S.volumeContent className="volume__content">
               <S.volumeImage className="volume__image">
                 <S.volumeSvg className="volume__svg" alt="volume">
@@ -102,7 +102,7 @@ function Bar() {
                 />
               </S.volumeProgress>
             </S.volumeContent>
-          </div>
+          </S.barVolumeBlock>
         </S.barPlayerBlock>
       </S.barContent>
     </S.bar>

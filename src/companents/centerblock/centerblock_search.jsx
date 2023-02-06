@@ -1,19 +1,18 @@
 import React from "react";
 import "../companents_styles.css";
-
+import * as S from "./centerblock_search_s.js"
 function CenterBlockSearch() {
   return (
-    <div className="centerblock__search search">
-      <svg className="search__svg">
+    <S.centerblockSearch className="centerblock__search search">
+      <S.searchSvg className="search__svg">
         <use href="img/icon/sprite.svg"></use>
-      </svg>
-      <input
-        className="search__text"
+      </S.searchSvg>
+      <S.searchText className="search__text"
         type="search"
         placeholder="Поиск"
         name="search"
       />
-    </div>
+    </S.centerblockSearch>
   );
 }
 

@@ -1,6 +1,6 @@
 import React from "react";
 import "../companents_styles.css";
-import * as S from "./playlist_item-s";
+import * as S from "./playlist_item_s";
 function PlaylistItem(props) {
   return (
     <S.playlistItemS key={props.id} className="playlist__item">
@@ -17,10 +17,17 @@ function PlaylistItem(props) {
         <S.trackAuthorLinS className="track__author">
           {props.author}
         </S.trackAuthorLinS>
-        <S.trackAlbumLinS className="track__album">{props.album}</S.trackAlbumLinS>
+        <S.trackAlbumLinS className="track__album">
+          {props.album}
+        </S.trackAlbumLinS>
         <div className="track__time">
-          <S.trackTimeSvgS className="track__time-svg" alt="time"></S.trackTimeSvgS>
-          <S.trackTimeText className="track__time-text">{props.duration_in_seconds}</S.trackTimeText>
+          <S.trackTimeSvgS
+            className="track__time-svg"
+            alt="time"
+          ></S.trackTimeSvgS>
+          <S.trackTimeText className="track__time-text">
+            {props.duration_in_seconds}
+          </S.trackTimeText>
         </div>
       </S.playlistTrackS>
     </S.playlistItemS>

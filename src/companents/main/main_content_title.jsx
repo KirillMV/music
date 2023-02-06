@@ -1,19 +1,25 @@
 import React from "react";
 import "../companents_styles.css";
-
+import * as S from "./main_content_title_s.js";
 function MainContentTitle() {
   return (
-    <div className="content__title playlist-title">
-      <div className="playlist-title__col col01">Трек</div>
-      <div className="playlist-title__col col02">ИСПОЛНИТЕЛЬ</div>
-      <div className="playlist-title__col col03">АЛЬБОМ</div>
-      <div className="playlist-title__col col04">
+    <S.contentTitle className="content__title playlist-title">
+      <S.playlistTitleCol className="playlist-title__col col01">
+        Трек
+      </S.playlistTitleCol>
+      <S.playlistTitleCol className="playlist-title__col col02">
+        ИСПОЛНИТЕЛЬ
+      </S.playlistTitleCol>
+      <S.playlistTitleCol className="playlist-title__col col03">
+        АЛЬБОМ
+      </S.playlistTitleCol>
+      <S.playlistTitleCol className="playlist-title__col col04">
         <svg className="playlist-title__svg" alt="time">
           <use href="img/icon/sprite.svg"></use>
         </svg>
-      </div>
-    </div>
+      </S.playlistTitleCol>
+    </S.contentTitle>
   );
 }
 
-export default MainContentTitle
+export default MainContentTitle;

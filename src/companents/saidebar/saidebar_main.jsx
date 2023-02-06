@@ -1,15 +1,15 @@
 import React from "react";
-import "../companents_styles.css";
+import * as S from "./saidebar_main_s";
 import SidebarPersonal from "./sidebar_personal";
 import SidebarBlock from "./sidebar_block";
 
-function MainSidebar(){
-    return(
-        <div className="main__sidebar sidebar">
-            <SidebarPersonal/>
-            <SidebarBlock/>
-        </div>       
-    )
+function MainSidebar() {
+  return (
+    <S.mainSidebar className="main__sidebar sidebar">
+      <SidebarPersonal />
+      <SidebarBlock />
+    </S.mainSidebar>
+  );
 }
 
-export default MainSidebar
+export default MainSidebar;

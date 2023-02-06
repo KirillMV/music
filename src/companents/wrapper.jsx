@@ -1,17 +1,18 @@
 import React from "react";
 import "./companents_styles.css";
+import * as S from "./wrapper_s";
 import Main from "./main/main";
 import Bar from "./functional_companents/bar";
 
 function Wrapper() {
   return (
-    <div className="wrapper">
-      <div className="container">
+    <S.wrapperS className="wrapper">
+      <S.containerS className="container">
         <Main />
         <Bar />
         <footer className="footer"></footer>
-      </div>
-    </div>
+      </S.containerS>
+    </S.wrapperS>
   );
 }
 

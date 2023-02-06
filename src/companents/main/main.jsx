@@ -1,16 +1,16 @@
 import React from "react";
-import "../companents_styles.css";
+import * as S from "./main-s";
 import MainNav from "./main_nav";
 import MainCenterBlock from "../centerblock/main_centerblock";
 import MainSidebar from "../saidebar/saidebar_main";
 
 function Main() {
   return (
-    <div className="main">
+    <S.mainS className="main">
       <MainNav />
       <MainCenterBlock />
       <MainSidebar />
-    </div>
+    </S.mainS>
   );
 }
 

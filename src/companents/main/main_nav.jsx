@@ -1,4 +1,5 @@
 import React from "react";
+import * as S from "./main_nav-s";
 import "../companents_styles.css";
 const { useState } = React;
 
@@ -8,40 +9,42 @@ const MainNav = () => {
   const toggleVisibility = () => setVisible(!visible);
 
   return (
-    <div className="main__nav nav">
-<div className="nav__logo logo">
-        <img className="logo__image" src="img/logo.png" alt="logo"></img>
-      </div>
-      <div className="nav__burger burger" onClick={toggleVisibility}>
-       
-
-        <span className="burger__line"></span>
-        <span className="burger__line"></span>
-        <span className="burger__line"></span>
-      </div>
+    <S.mainNav className="main__nav nav">
+      <S.navLogo className="nav__logo logo">
+        <S.logoImage
+          className="logo__image"
+          src="img/logo.png"
+          alt="logo"
+        ></S.logoImage>
+      </S.navLogo>
+      <S.navBurger className="nav__burger burger" onClick={toggleVisibility}>
+        <S.burgerLine className="burger__line"></S.burgerLine>
+        <S.burgerLine className="burger__line"></S.burgerLine>
+        <S.burgerLine className="burger__line"></S.burgerLine>
+      </S.navBurger>
 
       {visible && (
-        <div className="nav__menu menu">
-          <ul className="menu__list">
-            <li className="menu__item">
-              <a href="http://" className="menu__link">
+        <S.navMenu className="nav__menu menu">
+          <S.menuList className="menu__list">
+            <S.menuItem className="menu__item">
+              <S.menuLink href="http://" className="menu__link">
                 Главное
-              </a>
-            </li>
-            <li className="menu__item">
-              <a href="http://" className="menu__link">
+              </S.menuLink>
+            </S.menuItem>
+            <S.menuItem className="menu__item">
+              <S.menuLink href="http://" className="menu__link">
                 Мой плейлист
-              </a>
-            </li>
-            <li className="menu__item">
-              <a href="http://" className="menu__link">
+              </S.menuLink>
+            </S.menuItem>
+            <S.menuItem className="menu__item">
+              <S.menuLink href="http://" className="menu__link">
                 Войти
-              </a>
-            </li>
-          </ul>
-        </div>
+              </S.menuLink>
+            </S.menuItem>
+          </S.menuList>
+        </S.navMenu>
       )}
-    </div>
+    </S.mainNav>
   );
 };
 export default MainNav;

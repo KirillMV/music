@@ -1,19 +1,17 @@
 import React from "react";
-import "../companents_styles.css";
+import * as S from "./main_centerblock_s";
 import CenterBlockSearch from "./centerblock_search";
-import CenterBlockFilters from "./centroblock_filters";
+import CenterBlockFilters from "./centerblock_filters";
 import CenterblockContent from "./centerblock_content";
 
 function MainCenterBlock() {
   return (
-    <div className="main__centerblock centerblock">
-    
+    <S.mainCenterblock className="main__centerblock centerblock">
       <CenterBlockSearch />
-      <h2 className="centerblock__h2">Треки</h2>
+      <S.centerblockH2 className="centerblock__h2">Треки</S.centerblockH2>
       <CenterBlockFilters />
       <CenterblockContent />
-    
-    </div>
+    </S.mainCenterblock>
   );
 }
 
