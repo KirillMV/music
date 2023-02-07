@@ -2,7 +2,6 @@ import React from "react";
 import FilterButton from "../functional_companents/filter_button";
 // import "../companents_styles.css";
 import * as S from "./centerblock_filters_s";
-
 const { useState } = React;
 
 function CenterBlockFilters() {

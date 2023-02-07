@@ -26,3 +26,10 @@ export const sidebarList = styled.div`
   -ms-flex-align: center;
   align-items: center;
 `;
+
+export const sidebarItemSceleton = styled.div`
+  width: 250px;
+  height: 150px;
+  background-color: #313131;
+  margin-bottom: 30px;
+`;
