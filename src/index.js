@@ -1,7 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Wrapper from "./companents/wrapper";
-
+import { BrowserRouter } from "react-router-dom";
+import App from "./companents/app";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<Wrapper />);
+root.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>
+);
