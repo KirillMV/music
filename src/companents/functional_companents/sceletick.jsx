@@ -3,7 +3,7 @@ import "../companents_styles.css";
 
 export default function PlayListItemSceleton(props) {
   return (
-    <div key={props} className="playlist__item">
+    <div className="playlist__item">
       <div className="playlist__track track">
         <div className="track__title">
           <div className="track__title-image-scelet"></div>

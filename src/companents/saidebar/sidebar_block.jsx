@@ -21,9 +21,9 @@ function SidebarBlock() {
         sceletons
       ) : (
         <S.sidebarList className="sidebar__list">
-          <SidebarItem number={"01"} />
-          <SidebarItem number={"02"} />
-          <SidebarItem number={"03"} />
+          <SidebarItem number={"1"} />
+          <SidebarItem number={"2"} />
+          <SidebarItem number={"3"} />
         </S.sidebarList>
       )}
     </S.sidebarBlock>

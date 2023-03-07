@@ -11,16 +11,29 @@ import { useState,useRef} from "react";
     const loginp = useRef(null);
     const passinp = useRef(null);
     
-  
-    
-  
     function clicer() {
       if (
         loginp.current.value &&
         passinp.current.value 
       ) {
         
+        let user = {
+          email: `${loginp.current.value}@mail.com`,
+          password: passinp.current.value,
+        };
         setSwitcher(true);
+  
+        fetch(`https://painassasin.online/user/login/`, {
+          method: "POST",
+          headers:{
+            'Content-Type':'application/json;charset=UTF-8'
+          },
+          body: JSON.stringify(user),
+        })
+          .then((response) => response.json())
+          .then((posts) => {
+             window.logInfo = posts
+          });
       }
     }
     if (switcher) {

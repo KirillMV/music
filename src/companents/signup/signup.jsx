@@ -19,8 +19,26 @@ export const SignUp = () => {
       passimpret.current.value &&
       passimp.current.value === passimpret.current.value
     ) {
-      
+      let user = {
+        username: logimp.current.value,
+        first_name: "NAME",
+        last_name: "LAST_NAME",
+        email: `net_ema${Math.floor(Math.random()*Math.random()*100)}l@mail.com`,
+        password: passimp.current.value,
+      };
       setSwitcher(true);
+
+      fetch(`https://painassasin.online/user/signup/`, {
+        method: "POST",
+        headers:{
+          'Content-Type':'application/json;charset=UTF-8'
+        },
+        body: JSON.stringify(user),
+      })
+        .then((response) => response.json())
+        .then((posts) => {
+           window.regInfo = posts
+        });
     }
   }
   if (switcher) {
