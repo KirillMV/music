@@ -28,21 +28,24 @@ const MainNav = () => {
         <S.navMenu className="nav__menu menu">
           <S.menuList className="menu__list">
             <S.menuItem className="menu__item">
-              <S.menuLink href="http://" className="menu__link">
-                Главное
-              </S.menuLink>
+              <Link to="/">
+                <S.menuLink href="http://" className="menu__link">
+                  Главное
+                </S.menuLink>
+              </Link>
             </S.menuItem>
             <S.menuItem className="menu__item">
-            
-              <S.menuLink href="#" className="menu__link">
-                Мой плейлист
-              </S.menuLink> 
+              <Link to="/my_track">
+                <S.menuLink href="#" className="menu__link">
+                  Мой плейлист
+                </S.menuLink>
+              </Link>
             </S.menuItem>
             <S.menuItem className="menu__item">
-            <Link className="App-link" to="/login">
-              <S.menuLink href="http://" className="menu__link">
-                Войти
-              </S.menuLink>
+              <Link className="App-link" to="/login">
+                <S.menuLink href="http://" className="menu__link">
+                  Войти
+                </S.menuLink>
               </Link>
             </S.menuItem>
           </S.menuList>

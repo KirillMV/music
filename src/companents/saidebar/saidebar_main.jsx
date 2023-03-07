@@ -1,12 +1,12 @@
 import React from "react";
 import * as S from "./saidebar_main_s";
-import SidebarPersonal from "./sidebar_personal";
-import SidebarBlock from "./sidebar_block";
+import SidebarBlock from "./sidebar_block"
+import SidebarPersonal from  "./sidebar_personal"
 
 function MainSidebar() {
   return (
     <S.mainSidebar className="main__sidebar sidebar">
-      <SidebarPersonal />
+      <SidebarPersonal/>
       <SidebarBlock />
     </S.mainSidebar>
   );

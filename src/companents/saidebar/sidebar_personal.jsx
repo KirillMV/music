@@ -1,6 +1,7 @@
 import React from "react";
 import "../companents_styles.css";
 import * as S from "./sidebar_personal_s.js";
+
 function SidebarPersonal() {
   return (
     <S.sidebarPersonal className="sidebar__personal">
