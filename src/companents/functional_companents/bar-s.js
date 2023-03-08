@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+
+export const audi = styled.audio`
+display: none;
+
+`
 export const bar = styled.div`
   position: absolute;
   bottom: 0;
@@ -77,7 +82,7 @@ export const playerBtnPrev = styled.div`
   margin-right: 23px;
 `;
 
-export const playerBtnPrevSvg = styled.svg`
+export const playerBtnPrevSvg = styled.img`
   width: 15px;
   height: 14px;
 `;
@@ -90,11 +95,10 @@ export const playerBtnPlay = styled.div`
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-
   margin-right: 23px;
 `;
 
-export const playerBtnPlaySvg = styled.svg`
+export const playerBtnPlaySvg = styled.img`
   width: 22px;
   height: 20px;
   fill: #d9d9d9;
@@ -124,21 +128,12 @@ export const barVolumeBlock = styled.div`
   padding: 0 92px 0 0;
 `;
 
-export const playerBtnNextSvg = styled.svg`
-  padding: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+export const playerBtnNextSvg = styled.img`
   width: 15px;
   height: 14px;
-  fill: inherit;
-  stroke: #d9d9d9;
 `;
 
-export const playerBtnRepeat = styled.svg`
+export const playerBtnRepeat = styled.div`
   padding: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -146,11 +141,10 @@ export const playerBtnRepeat = styled.svg`
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-right: 24px;
 `;
 
-export const playerBtnRepeatSvg = styled.svg`
-  width: 18px;
+export const playerBtnRepeatSvg = styled.img`
+  width: 19px;
   height: 12px;
   fill: transparent;
   stroke: #696969;
@@ -173,7 +167,7 @@ export const playerBtnShuffle = styled.div`
   align-items: center;
 `;
 
-export const playerBtnShuffleSvg = styled.svg`
+export const playerBtnShuffleSvg = styled.img`
   width: 19px;
   height: 12px;
   fill: transparent;
@@ -275,7 +269,7 @@ export const trackPlayLikeDis = styled.div`
 export const trackPlayLike = styled.div`
   padding: 5px;
 `;
-export const trackPlayLikeSvg = styled.svg`
+export const trackPlayLikeSvg = styled.img`
   width: 14px;
   height: 12px;
   fill: transparent;
@@ -301,7 +295,7 @@ export const trackPlayDislike = styled.div`
   padding: 5px;
   margin-left: 28.5px;
 `;
-export const trackPlayDislikeSvg = styled.svg`
+export const trackPlayDislikeSvg = styled.img`
   width: 14.34px;
   height: 13px;
   fill: transparent;
