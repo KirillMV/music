@@ -1,44 +1,44 @@
 import React from "react";
 import "../companents_styles.css";
 import * as S from "./bar-s.js";
-import { useState, useRef } from "react";
+import { useState, useRef,useEffect } from "react";
 import { Login } from "../login/login";
+
+
 
 function Bar() {
   const [active, setActive] = useState(true);
   const audi = useRef();
-  const [progress, setProgress] = useState("");
+  const progressRef = useRef () ;
+
+  useEffect ( () => {
+    audi.current.ontimeupdate = () => {
+  const progress = (audi.current.currentTime / audi.current.duration) * 1000
+  progressRef.current.value = progress
+  }}, [audi, progressRef])
+
+  const progressChange = () => {
+    audi.current.currentTime = progressRef.current.value / 1000 * audi.current.duration}
+    
+
 
   function clicer() {
     setActive(!active);
     if (active) {
       audi.current.play();
-      player();
     } else {
       audi.current.pause();
-      let stop = player();
-      console.log(stop);
-      stop();
     }
   }
 
-  function player() {
-    const timerStop = setInterval(() => {
-      console.log("juj");
-    }, 100);
-    return () => {
-      clearInterval(timerStop);
-      console.log("stop");
-    };
-  }
-
+  
   return (
     <S.bar className="bar">
       <S.audi ref={audi} id="myAudio" controls>
         <source src="./audi/Bobby_Marleni_-_Dropin.mp3" type="audio/mpeg" />
       </S.audi>
       <S.barContent className="bar__content">
-        <S.barPlayerProgress className="bar__player-progress"></S.barPlayerProgress>
+        <S.barPlayerProgress ref={progressRef} onChange={progressChange} defaultValue={0} max={1000} type={"range"} className="bar__player-progress"></S.barPlayerProgress>
         <S.barPlayerBlock className="bar__player-block">
           <S.barPlayer className="bar__player player">
             <S.playerControls className="player__controls">

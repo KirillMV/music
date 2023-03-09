@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const audi = styled.audio`
 display: none;
 
+
 `
 export const bar = styled.div`
   position: absolute;
@@ -21,12 +22,36 @@ export const barContent = styled.div`
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  
 `;
 
-export const barPlayerProgress = styled.div`
-  width: 100%;
-  height: 5px;
-  background: #2e2e2e;
+export const barPlayerProgress = styled.input`
+  -webkit-appearance: none;
+    width: 100%;
+    height: 4px;
+    /* background: #d3d3d3; */
+    background: grey;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    border-radius:35px;
+    width: 40px; 
+    height: 40px; 
+    background-image: url(img/icon/weider.png); 
+    background-color:red;
+    background-size: contain;
+    cursor: pointer;}
+    &::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    /* background: #4CAF50; */
+    background: yellow;
+    cursor: pointer;
+}
 `;
 
 export const barPlayerBlock = styled.div`
@@ -85,6 +110,7 @@ export const playerBtnPrev = styled.div`
 export const playerBtnPrevSvg = styled.img`
   width: 15px;
   height: 14px;
+
 `;
 
 export const playerBtnPlay = styled.div`
@@ -318,4 +344,30 @@ export const volumeProgress = styled.div`
 `;
 export const volumeProgressLine = styled.input`
   width: 109px;
+  -webkit-appearance: none;
+    width: 100%;
+    height: 4px;
+   
+    background: grey;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    border-radius:25px;
+    width: 35px; 
+    height: 35px; 
+    background-image: url(img/icon/shturmovik.png); 
+    background-color:red;
+    background-size: contain;
+    cursor: pointer;}
+    &::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    
+    background: yellow;
+    cursor: pointer;
+}
 `;
