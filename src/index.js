@@ -1,9 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./style.css";
-import "./style.scss";
-import FilterButtons from "./buttons/filterButtons";
-
-
+import { BrowserRouter } from "react-router-dom";
+import App from "./companents/app";
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<FilterButtons />);
+
+root.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>
+);
