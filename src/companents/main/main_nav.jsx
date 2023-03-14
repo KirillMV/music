@@ -2,15 +2,22 @@ import React from "react";
 import * as S from "./main_nav-s";
 import "../companents_styles.css";
 import { Link } from "react-router-dom";
+import { useThemeContext } from "../theme";
 const { useState } = React;
+
 
 const MainNav = () => {
   const [visible, setVisible] = useState(false);
+  const {toggleTheme} = useThemeContext();
+  const {theme} = useThemeContext();
 
   const toggleVisibility = () => setVisible(!visible);
 
   return (
-    <S.mainNav className="main__nav nav">
+    <S.mainNav style={{
+      backgroundColor:theme.sideBarBackground,
+      color:theme.color,
+    }}>
       <S.navLogo className="nav__logo logo">
         <S.logoImage
           className="logo__image"
@@ -48,6 +55,7 @@ const MainNav = () => {
                 </S.menuLink>
               </Link>
             </S.menuItem>
+            <div onClick={toggleTheme}>tema</div>
           </S.menuList>
         </S.navMenu>
       )}

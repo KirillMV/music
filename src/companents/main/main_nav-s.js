@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const mainNav = styled.div`
   width: 244px;
-  background-color: #181818;
+  /* background-color: #181818; */
   padding: 20px 0 20px 36px;
 `;
 
@@ -56,7 +56,7 @@ export const menuItem = styled.li`
 `;
 
 export const menuLink = styled.a`
-  color: #ffffff;
+  /* color: #ffffff; */
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
