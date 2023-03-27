@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+          box-sizing: border-box; 
 }
 
 *:before,
@@ -268,14 +268,6 @@ body {
   line-height: 24px;
 }
 
-.search__text::-ms-input-placeholder {
-  background-color: transparent;
-  color: #FFFFFF;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-}
 
 .search__text::placeholder {
   background-color: transparent;
@@ -307,7 +299,7 @@ body {
 .filter__button:not(:last-child) {
   margin-right: 10px;
 }
-
+/* не перенес */
 .content__title {
   display: -webkit-box;
   display: -ms-flexbox;
