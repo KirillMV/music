@@ -17,7 +17,7 @@ export const SignBox = styled.div`
   background: #ffffff;
   border-radius: 12px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 `;
 
@@ -41,7 +41,7 @@ export const loginInput = styled.input`
     color: #e1e1e1;
   }
   margin-top: 40px;
-  margin-bottom: 46px;
+ 
 `;
 
 export const passwordInput = styled.input`
@@ -49,6 +49,7 @@ export const passwordInput = styled.input`
   border-bottom: 1px solid #d0cece;
   width: 178px;
   padding-bottom: 8px;
+  
   &::placeholder {
     font-family: "StratosSkyeng";
     font-style: normal;
@@ -99,3 +100,21 @@ export const buttonReg = styled.button`
     background-color: #bab6b6;
   }
 `;
+
+export const email = styled.input`
+  border: none;
+  border-bottom: 1px solid #d0cece;
+  width: 178px;
+  padding-bottom: 8px;
+  &::placeholder {
+    font-family: "StratosSkyeng";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.003em;
+    font-feature-settings: "pnum" on, "lnum" on;
+    color: #e1e1e1;
+  }
+`
+

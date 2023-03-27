@@ -9,6 +9,7 @@ export const SignUp = () => {
   const logimp = useRef(null);
   const passimp = useRef(null);
   const passimpret = useRef(null);
+  const email = useRef(null);
 
   useEffect(() => {});
 
@@ -17,16 +18,17 @@ export const SignUp = () => {
       logimp.current.value &&
       passimp.current.value &&
       passimpret.current.value &&
-      passimp.current.value === passimpret.current.value
+      passimp.current.value === passimpret.current.value&&
+      email.current.value
     ) {
       let user = {
         username: logimp.current.value,
         first_name: "NAME",
         last_name: "LAST_NAME",
-        email: `net_ema${Math.floor(Math.random()*Math.random()*100)}l@mail.com`,
+        email: email.current.value,
         password: passimp.current.value,
       };
-      setSwitcher(true);
+      
 
       fetch(`https://painassasin.online/user/signup/`, {
         method: "POST",
@@ -38,6 +40,11 @@ export const SignUp = () => {
         .then((response) => response.json())
         .then((posts) => {
            window.regInfo = posts
+           console.log(posts);
+           if(posts.id){
+            setSwitcher(true);
+           }
+          
         });
     }
   }
@@ -55,6 +62,7 @@ export const SignUp = () => {
           type="password"
           placeholder="Повторите пароль"
         ></S.passwordInputrepeat>
+        <S.email ref={email} type="email" placeholder="Почка"></S.email>
         <S.buttonReg onClick={clicer}>Зарегистрироваться</S.buttonReg>
       </S.SignBox>
     </S.blackBox>
