@@ -28,8 +28,8 @@ export const sidebarList = styled.div`
 `;
 
 export const sidebarItemSceleton = styled.div`
-  width: 251px;
-  height: 151px;
+  width: 250px;
+  height: 150px;
   background-color: #313131;
   margin-bottom: 30px;
 `;

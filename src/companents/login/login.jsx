@@ -8,20 +8,20 @@ import { useState,useRef} from "react";
   export const Login = () => {
     const [switcher, setSwitcher] = useState(false);
   
-    const loginp = useRef(null);
+    const mail = useRef(null);
     const passinp = useRef(null);
     
     function clicer() {
       if (
-        loginp.current.value &&
+        mail.current.value &&
         passinp.current.value 
       ) {
         
         let user = {
-          email: `${loginp.current.value}@mail.com`,
+          email:mail.current.value,
           password: passinp.current.value,
         };
-        setSwitcher(true);
+        
   
         fetch(`https://painassasin.online/user/login/`, {
           method: "POST",
@@ -32,13 +32,19 @@ import { useState,useRef} from "react";
         })
           .then((response) => response.json())
           .then((posts) => {
-             window.logInfo = posts
+            
+            console.log(posts);
+            if(!posts.detail){
+              setSwitcher(true);
+              window.logInfo = posts
+            }
+           
           });
       }
     }
     if (switcher) {
-      document.cookie= 'token'
-      console.log(document.cookie);
+      document.cookie = 'token'
+    
       return  <Navigate to={"/"}></Navigate>;
     }
 
@@ -46,7 +52,7 @@ import { useState,useRef} from "react";
     <S.blackBox>
       <S.loginBox>
         <S.logo src="/img/logo_black.svg" alt="Logo"></S.logo>
-        <S.loginInput ref={loginp} type="text" placeholder="Логин" />
+        <S.loginInput ref={mail} type="email" placeholder="Почта" />
         <S.passwordInput ref={passinp} type="password" placeholder="Пароль" />
         <S.buttonIn onClick={clicer}>Войти</S.buttonIn>
         <Link to="/signup">

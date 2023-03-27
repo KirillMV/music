@@ -9,7 +9,7 @@ export const SignUp = () => {
   const logimp = useRef(null);
   const passimp = useRef(null);
   const passimpret = useRef(null);
-  const email = useRef(null);
+  const mail = useRef(null);
 
   useEffect(() => {});
 
@@ -17,15 +17,15 @@ export const SignUp = () => {
     if (
       logimp.current.value &&
       passimp.current.value &&
+      mail.current.value &&
       passimpret.current.value &&
-      passimp.current.value === passimpret.current.value&&
-      email.current.value
+      passimp.current.value === passimpret.current.value
     ) {
       let user = {
         username: logimp.current.value,
         first_name: "NAME",
         last_name: "LAST_NAME",
-        email: email.current.value,
+        email:mail.current.value,
         password: passimp.current.value,
       };
       
@@ -39,11 +39,12 @@ export const SignUp = () => {
       })
         .then((response) => response.json())
         .then((posts) => {
-           window.regInfo = posts
-           console.log(posts);
-           if(posts.id){
+          
+          if(posts.id){
+            console.log(posts.id);
             setSwitcher(true);
-           }
+            window.regInfo = posts
+          }
           
         });
     }
@@ -56,13 +57,14 @@ export const SignUp = () => {
       <S.SignBox>
         <S.logo src="/img/logo_black.svg" alt="Logo"></S.logo>
         <S.loginInput ref={logimp} type="text" placeholder="Логин" />
+        <S.loginInput ref={mail} type="email" placeholder="Почта" />
         <S.passwordInput ref={passimp} type="password" placeholder="Пароль" />
         <S.passwordInputrepeat
           ref={passimpret}
           type="password"
           placeholder="Повторите пароль"
         ></S.passwordInputrepeat>
-        <S.email ref={email} type="email" placeholder="Почка"></S.email>
+
         <S.buttonReg onClick={clicer}>Зарегистрироваться</S.buttonReg>
       </S.SignBox>
     </S.blackBox>
