@@ -13,18 +13,14 @@ export const AppRoutes = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/" element={<Wrapper />} />
-      <Route
-        path="/my_track"
-        element={
-          <ProtectedRoute>
-            <MyTrack />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/collection/:id"
-        element={<Fleck content={<Collection />} />}
-      ></Route>
+      <Route element={<ProtectedRoute />}>
+        <MyTrack />
+        <Route
+          path="/collection/:id"
+          element={<Fleck content={<Collection />} />}
+        ></Route>
+      </Route>
+
       {/* <Route path="*" element={<NotFound />} /> */}
     </Routes>
   );
